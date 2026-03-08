@@ -26,3 +26,18 @@ Auralis se encuentra en fase de desarrollo incial. La priemra versión del sitio
 - Los primeros programas accesibles desde la web.
 
 ## Estrcutura general prevista.
+```text
+auralis-site/
+├─ _config.yml
+├─ index.md
+├─ about.md
+├─ mission-vision.md
+├─ news.md
+├─ programs.md
+├─ knowledge.md
+├─ _posts/
+├─ _layouts/
+├─ _includes/
+├─ assets/
+├─ programs/
+└─ knowledge/

@@ -12,7 +12,7 @@ Este espacio esta dedicado a la actualidad económica y los acontecimientos que 
   <div class="library-item">
     <div class="library-item__icon">N1</div>
     <div class="library-item__content">
-      <h3>Prosimamente</h3>
+      <h3>Próximamente</h3>
       <p>...</p>
     </div>
   </div>

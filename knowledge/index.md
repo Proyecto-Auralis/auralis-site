@@ -13,7 +13,7 @@ Este espacio esta dedicado a la elaboración y reunión de materiales orientados
     <div class="library-item__icon">E</div>
     <div class="library-item__content">
       <h3>Economía</h3>
-      <p>[Ciencia social en la que se estudia la asignación de recursos escasos para satisfacer necesidades.</p>
+      <p>Ciencia social en la que se estudia la asignación de recursos escasos para satisfacer necesidades.</p>
     </div>
   </div>
 

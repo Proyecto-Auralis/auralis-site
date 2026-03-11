@@ -1,10 +1,11 @@
 ---
 layout: page
-title: About Auralis
+title: About
 permalink: /about/
 description: Información sobre Proyecto Auralis.
-lead: "Auralis, la economía al alcance de3 todos."
+lead: ""
 ---
+
 
 Auralis nace de una convicción simple: el acceso al conocimiento económico no debería de verse limitado por la dispersión de los recursos, por las barreras de entrada o por la dificultada de encontrar contenidos verdaderamente útiles en un mismo entorno. En un ámbito que influye de forma tan contundente y directa en la vida pública y privada de las personas, resulta razonable aspirar a un espacio en el que la economía pueda consultarse, estudiarse y entenderse con claridad, continuidad y practicidad. 
 

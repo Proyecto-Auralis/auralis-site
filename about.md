@@ -2,6 +2,8 @@
 layout: page
 title: About
 permalink: /about/
+description: Información sobre Proyecto Auralis.
+lead: "Auralis, la economía al alcance de3 todos."
 ---
 
 # About Auralis

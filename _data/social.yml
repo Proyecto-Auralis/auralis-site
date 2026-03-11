@@ -1,8 +1,11 @@
-<div class="social-links">
-  {% for item in site.data.social %}
-    <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }}">
-      {{ item.label }}
-    </a>
-  {% endfor %}
-</div>
+- name: LinkedIn
+  label: LinkedIn
+  url: "https://www.linkedin.com/company/proyecto-auralis/about/?viewAsMember=true"
 
+- name: X
+  label: X
+  url: "https://x.com/"
+
+- name: Reddit
+  label: Reddit
+  url: "https://www.reddit.com/r/Proyecto_Auralis/"

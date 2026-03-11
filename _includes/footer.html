@@ -1,16 +1,32 @@
 <footer class="site-footer">
   <div class="container">
-    <div class="site-footer__top">
-      <p class="site-footer__brand">Proyecto Auralis</p>
-      <p class="site-footer__text">
-        Economía, finanzas e inversión open source.
-      </p>
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">Proyecto Auralis</p>
+        <p class="site-footer__text">
+          Economía, finanzas e inversión open source.
+        </p>
+      </div>
+
+      <div>
+        <p class="site-footer__heading">Navegación</p>
+        <ul class="site-footer__links">
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/knowledge/' | relative_url }}">Knowledge</a></li>
+          <li><a href="{{ '/programs/' | relative_url }}">Programs</a></li>
+          <li><a href="{{ '/news/' | relative_url }}">News</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="site-footer__heading">Redes</p>
+        {% include social-links.html %}
+      </div>
     </div>
 
-    {% include social-links.html %}
-
     <div class="site-footer__bottom">
-      <p>&copy; {{ 'now' | date: '%Y' }} Proyecto Auralis</p>
+      <p>© 2026 Proyecto Auralis. Código bajo licencia MIT.</p>
     </div>
   </div>
 </footer>

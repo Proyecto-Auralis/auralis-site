@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About Auralis
 permalink: /about/
 description: Información sobre Proyecto Auralis.
 lead: ""

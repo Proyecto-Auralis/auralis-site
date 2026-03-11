@@ -5,10 +5,36 @@ layout: default
   <section class="home-hero">
     <div class="container">
       <div class="home-hero__content">
+        <p class="eyebrow">Proyecto editorial open source</p>
         <h1>{{ page.title }}</h1>
+
+        {% if page.intro %}
+          <p class="home-lead">{{ page.intro }}</p>
+        {% endif %}
+
         <div class="home-intro">
           {{ content }}
         </div>
+      </div>
+
+      <div class="section-grid">
+        <a class="section-card" href="{{ '/knowledge/' | relative_url }}">
+          <div class="section-card__icon">K</div>
+          <h2>Knowledge</h2>
+          <p>Biblioteca estructurada de materiales de economía, finanzas e inversión.</p>
+        </a>
+
+        <a class="section-card" href="{{ '/programs/' | relative_url }}">
+          <div class="section-card__icon">P</div>
+          <h2>Programs</h2>
+          <p>Programas y herramientas open source organizados como una biblioteca técnica.</p>
+        </a>
+
+        <a class="section-card" href="{{ '/news/' | relative_url }}">
+          <div class="section-card__icon">N</div>
+          <h2>News</h2>
+          <p>Archivo cronológico de noticias, documentos y publicaciones del proyecto.</p>
+        </a>
       </div>
     </div>
   </section>

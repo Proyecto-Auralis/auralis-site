@@ -3,11 +3,6 @@ description: Noticias, herramientas y conocimiento económico.
 url: "https://proyectoauralis.org"
 baseurl: ""
 markdown: kramdown
-theme: minima
+
 lang: es
 
-header_pages:
-- about.md
-- news.md
-- prgrams.md
-- knowledge.md

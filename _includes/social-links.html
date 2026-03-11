@@ -1,5 +1,7 @@
 <div class="social-links">
-  <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  <a href="#" target="_blank" rel="noopener noreferrer">X</a>
-  <a href="#" target="_blank" rel="noopener noreferrer">Reddit</a>
+  {% for item in site.data.social %}
+    <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }}">
+      {{ item.label }}
+    </a>
+  {% endfor %}
 </div>

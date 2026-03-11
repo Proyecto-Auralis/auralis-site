@@ -1,1 +1,16 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <p class="site-footer__brand">Proyecto Auralis</p>
+      <p class="site-footer__text">
+        Economía, finanzas e inversión open source.
+      </p>
+    </div>
 
+    {% include social-links.html %}
+
+    <div class="site-footer__bottom">
+      <p>&copy; {{ 'now' | date: '%Y' }} Proyecto Auralis</p>
+    </div>
+  </div>
+</footer>

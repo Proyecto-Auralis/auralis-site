@@ -22,3 +22,5 @@ Los ocntenidos publicados en Auralis News son originales y se encuentran protegi
 Toda reutilización de los contenidos de Auralis deberá respetar la auditoria, integridad y contexto original. Se recomienda encarecidamente la atribución. Se PROHIBE presentar estos materiales como propios o laterarlos de manera que desvirtue su sentido.
 
 El Proyecto Auralis agradece toda reutilización legítima de sus materiales que vaya acompañada de una cita completa de la fuente original. Las solicitudes de autorización para usos no permitidos por la licencia aplicable podrán ser tramitados y negociados a través de los canales de contacto habilitados por el proyecto.
+
+*Usos no comerciales, se consideramos usos no comerciales todos aquellos usos que no comercialicen de forma parcial o ltotal de nuestro contenido. Estos usos comerciales se prohiben rotundamente.

@@ -2,10 +2,6 @@
   label: LinkedIn
   url: "https://www.linkedin.com/company/proyecto-auralis/about/?viewAsMember=true"
 
-- name: X
-  label: X
-  url: "https://x.com/"
-
 - name: Reddit
   label: Reddit
   url: "https://www.reddit.com/r/Proyecto_Auralis/"

@@ -13,7 +13,6 @@ Esta sección reúne los materiales de economía de Auralis Knowledge. Aquí se 
     <div class="library-item__icon">F</div>
     <div class="library-item__content">
       <h3>Fundamentos</h3>
-      <p>Materiales introductorios de la economía.</p>
     </div>
   </a>
 </div>

@@ -2,7 +2,7 @@
 layout: page
 title: Calculadoras financieras
 permalink: /programs/calculadoras-financieras/
-description: Herramientas de cálculo financiero de Proyecto Auralis.
+description: Auralis Programs
 lead: ""
 ---
 

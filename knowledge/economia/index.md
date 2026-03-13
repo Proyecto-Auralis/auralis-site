@@ -3,7 +3,7 @@ layout: page
 title: Economía
 permalink: /knowledge/economia/
 description: 
-lead: "Fundamentos, apuntes y materiales de economía."
+lead: 
 ---
 
 Esta sección reúne los materiales de economía de Auralis Knowledge. Aquí se irán organizando los apuntes y documentos de forma progresiva, desde contenidos generales hasta desarrollos más específicos.

@@ -2,7 +2,7 @@
 layout: page
 title: Economía
 permalink: /knowledge/economia/
-description: Auralis Knowledge 
+description: Knowledge 
 lead: 
 ---
 

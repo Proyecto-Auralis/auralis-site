@@ -18,19 +18,19 @@ Esta sección reúne los boletines y análisis publicados en marzo de 2026.
       <div class="library-item__actions">
         <a
           class="library-item__button"
-          href="{{ '/news/03-2026/Auralis News-Boletín semanal 9-15, Marzo, 2026.pdf' | relative_url }}"
+          href="{{ 'news/03-2006/Auralis News - Boletín semana 9-15, Marzo, 2026..pdf' | relative_url }}"
           target="_blank"
           rel="noopener"
         >
-          Ver archivo
+          Ver archivo  
         </a>
 
         <a
           class="library-item__button library-item__button--secondary"
-          href="{{ '/news/03-2026/Auralis News-Boletín semanal 9-15, Marzo, 2026.pdf' | relative_url }}"
+          href="{{ 'news/03-2006/Auralis News - Boletín semana 9-15, Marzo, 2026..pdf' | relative_url }}"
           download="boletin-semanal-01.pdf"
         >
-          Descargar
+            Descargar
         </a>
       </div>
     </div>

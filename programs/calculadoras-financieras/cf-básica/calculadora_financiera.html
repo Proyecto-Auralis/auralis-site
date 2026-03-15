@@ -1,0 +1,274 @@
+<!doctype html>
+<!--
+CF - Básica
+Autoría y firma:
+Proyecto Auralis
+Auralis Programs
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CF - Básica</title>
+<style>
+:root{
+  --bg:#f5f7fa;
+  --card:#0f1724;
+  --panel:#0b1220;
+  --muted:#9aa6b2;
+  --accent:#c7a44b; /* gold */
+  --glass: rgba(255,255,255,0.04);
+  --text:#e6eef6;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#eef2f6 0%,#f5f7fa 100%);font-family:Inter,Segoe UI,Arial;color:#0b1220;display:flex;align-items:center;justify-content:center;height:100vh}
+.app{width:980px;max-width:96%;display:grid;grid-template-columns:420px 1fr;gap:20px;padding:22px;border-radius:12px;align-items:start}
+.card{background:linear-gradient(180deg,#071026,#071427);border-radius:12px;padding:18px;color:var(--text);box-shadow:0 8px 30px rgba(3,7,18,0.6)}
+.header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#0ea5a4,#065f73);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021;box-shadow:0 6px 18px rgba(2,6,12,0.6)}
+.title{font-size:18px;font-weight:700}
+.small{color:var(--muted);font-size:13px}
+.display{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:10px;padding:14px;font-size:28px;text-align:right;min-height:64px;box-shadow:inset 0 -6px 18px rgba(0,0,0,0.4)}
+.keys{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:12px}
+.btn{padding:12px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:var(--text);font-weight:600;cursor:pointer;box-shadow:0 6px 16px rgba(2,6,12,0.5)}
+.btn.op{background:linear-gradient(180deg,#1f2937,#0f1724);color:var(--accent);font-weight:700}
+.btn.eq{background:linear-gradient(180deg,#0b6dc4,#0c84e6);color:#fff;font-weight:800;grid-column:span 5}
+.inputs{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.row{display:flex;gap:8px}
+.input{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+.panel{background:#ffffff;border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(16,24,40,0.06);color:#0b1224}
+.right{display:flex;flex-direction:column;gap:12px}
+.h2{font-weight:700;margin:0 0 6px 0}
+.muted{color:#55606a;font-size:13px}
+.table{width:100%;border-collapse:collapse;margin-top:8px}
+.table th,.table td{padding:8px;border-bottom:1px solid #eef2f6;text-align:right;font-size:13px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.small-muted{font-size:12px;color:#7a8790}
+@media (max-width:1000px){.app{grid-template-columns:1fr}} 
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="card">
+    <div class="header">
+      <div class="logo">CF</div>
+      <div>
+        <div class="title">CF - Básica</div>
+        <div class="small">Calculadora financiera — compacta</div>
+      </div>
+    </div>
+
+    <div id="display" class="display">0</div>
+
+    <div class="keys" id="keys">
+      <button class="btn" data-val="7">7</button>
+      <button class="btn" data-val="8">8</button>
+      <button class="btn" data-val="9">9</button>
+      <button class="btn op" data-val="/">÷</button>
+      <button class="btn" id="clear">C</button>
+
+      <button class="btn" data-val="4">4</button>
+      <button class="btn" data-val="5">5</button>
+      <button class="btn" data-val="6">6</button>
+      <button class="btn op" data-val="*">×</button>
+      <button class="btn" id="back">⌫</button>
+
+      <button class="btn" data-val="1">1</button>
+      <button class="btn" data-val="2">2</button>
+      <button class="btn" data-val="3">3</button>
+      <button class="btn op" data-val="-">−</button>
+      <button class="btn" data-val="%">%</button>
+
+      <button class="btn" data-val="0">0</button>
+      <button class="btn" data-val=".">.</button>
+      <button class="btn" data-val="(">(</button>
+      <button class="btn" data-val=")">)</button>
+      <button class="btn op" data-val="+">+</button>
+
+      <button class="btn" id="mplus">M+</button>
+      <button class="btn" id="mminus">M-</button>
+      <button class="btn" id="ms">MS</button>
+      <button class="btn" id="mr">MR</button>
+      <button class="btn" id="mc">MC</button>
+
+      <button class="btn op" id="pmt">PMT</button>
+      <button class="btn op" id="pv">PV</button>
+      <button class="btn op" id="fv">FV</button>
+      <button class="btn op" id="rate">RATE</button>
+      <button class="btn op" id="nper">NPER</button>
+
+      <button class="btn op" id="npv">NPV</button>
+      <button class="btn op" id="irr">IRR</button>
+      <button class="btn op" id="amort">AMORT</button>
+      <button class="btn op" id="conv">CONV</button>
+      <button class="btn eq" id="equals">=</button>
+    </div>
+
+    <div class="inputs">
+      <div class="row">
+        <input id="rate_in" class="input" placeholder="Tasa por periodo (ej: 1 ó 0.01)">
+        <input id="nper_in" class="input" placeholder="nper">
+      </div>
+      <div class="row">
+        <input id="pmt_in" class="input" placeholder="pmt">
+        <input id="pv_in" class="input" placeholder="pv">
+      </div>
+      <div class="row">
+        <input id="fv_in" class="input" placeholder="fv">
+        <input id="type_in" class="input" placeholder="type (0/1)">
+      </div>
+
+      <textarea id="cf_list" class="input" placeholder="Flujos de caja separados por comas (ej: -1000,300,300,400)" style="height:72px"></textarea>
+
+    </div>
+  </div>
+
+  <div class="panel right">
+    <div>
+      <h3 class="h2">Resultados</h3>
+      <div id="result_main" class="small-muted">—</div>
+    </div>
+
+    <div>
+      <h3 class="h2">Amortización</h3>
+      <div class="actions">
+        <button class="btn" id="gen_table">Generar tabla</button>
+        <button class="btn" id="export_csv">Exportar CSV</button>
+      </div>
+      <div id="amort_table_wrap" style="max-height:360px;overflow:auto;margin-top:8px"></div>
+    </div>
+
+    <div>
+      <h3 class="h2">Notas</h3>
+      <div class="small-muted">Entradas: use signo negativo para salida inicial cuando corresponda. Tasa aceptada en forma 5 ó 0.05 (5 → 0.05).</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Seguridad básica para evaluar expresiones aritméticas
+function sanitizeExpr(expr){
+  if(typeof expr !== 'string') return '';
+  if(!/^[0-9+\-*/().,%\s]*$/.test(expr)) return '';
+  expr = expr.replace(/(\d+(?:\.\d+)?)%/g, '($1/100)');
+  return expr;
+}
+function safeEval(expr){
+  expr = sanitizeExpr(expr);
+  try{ return Function('return ('+expr+')')(); }catch(e){ return NaN; }
+}
+
+// DOM refs
+const display = document.getElementById('display');
+const keys = document.getElementById('keys');
+const resultMain = document.getElementById('result_main');
+let expr = '';
+let mem = 0;
+
+function refresh(){ display.textContent = expr || '0'; }
+
+keys.addEventListener('click', (e)=>{
+  const btn = e.target.closest('button'); if(!btn) return;
+  const val = btn.dataset.val;
+  if(val !== undefined){ expr += val; refresh(); return; }
+  // function buttons handled elsewhere
+});
+
+document.getElementById('clear').addEventListener('click', ()=>{ expr = ''; refresh(); resultMain.textContent = '—'; document.getElementById('amort_table_wrap').innerHTML = ''; });
+document.getElementById('back').addEventListener('click', ()=>{ expr = expr.slice(0,-1); refresh(); });
+
+document.getElementById('equals').addEventListener('click', ()=>{ const r = safeEval(expr); expr = Number.isFinite(r) ? String(r) : ''; refresh(); if(!Number.isFinite(r)) resultMain.textContent = 'Error expresión'; else resultMain.textContent = r; });
+
+// Memory
+document.getElementById('mplus').addEventListener('click', ()=>{ mem += Number(safeEval(expr || '0') || 0); });
+document.getElementById('mminus').addEventListener('click', ()=>{ mem -= Number(safeEval(expr || '0') || 0); });
+document.getElementById('ms').addEventListener('click', ()=>{ mem = Number(safeEval(expr || '0') || 0); });
+document.getElementById('mr').addEventListener('click', ()=>{ expr += String(mem); refresh(); });
+document.getElementById('mc').addEventListener('click', ()=>{ mem = 0; });
+
+// Financial functions
+function toNumber(v){ if(v === '' || v === null || v === undefined) return NaN; return Number(v); }
+function normalizeRate(r){ if(isNaN(r)) return NaN; if(Math.abs(r) >= 1) return r/100; return r; }
+
+function PMT(rate,nper,pv,fv=0,type=0){ rate = Number(rate); nper = Number(nper); pv = Number(pv); fv = Number(fv); type = Number(type); if(isNaN(rate)||isNaN(nper)||isNaN(pv)) return NaN; if(rate===0) return -(pv+fv)/nper; const r=rate; const pow=Math.pow(1+r,nper); return -(r*(pv*pow+fv))/((1+r*type)*(pow-1)); }
+function FV(rate,nper,pmt,pv=0,type=0){ rate=Number(rate); nper=Number(nper); pmt=Number(pmt); pv=Number(pv); type=Number(type); if(isNaN(rate)||isNaN(nper)) return NaN; if(rate===0) return -(pv + pmt*nper); const r=rate; const pow=Math.pow(1+r,nper); return -(pv*pow + pmt*(1+r*type)*((pow-1)/r)); }
+function PV(rate,nper,pmt,fv=0,type=0){ rate=Number(rate); nper=Number(nper); pmt=Number(pmt); fv=Number(fv); type=Number(type); if(isNaN(rate)||isNaN(nper)) return NaN; if(rate===0) return -(fv + pmt*nper); const r=rate; const pow=Math.pow(1+r,nper); return -( fv + pmt*(1+r*type)*((pow-1)/r) ) / pow; }
+
+// solver utilities
+function solveFor(fn, x0=0.01, x1=0.1, maxIter=200, tol=1e-12){ let f0=fn(x0), f1=fn(x1); for(let i=0;i<maxIter;i++){ if(Math.abs(f0)<tol) return x0; if(Math.abs(f1)<tol) return x1; if(f1-f0===0) { x1 = x0 + 1e-6; f1 = fn(x1); } const x2 = x1 - f1*(x1-x0)/(f1-f0); const f2 = fn(x2); if(!isFinite(f2)) break; x0=x1; f0=f1; x1=x2; f1=f2; if(Math.abs(f1) < tol) return x1; } // fallback bisection
+  let a=-0.9999999,b=1e6,fa=fn(a),fb=fn(b); if(!isFinite(fa) || !isFinite(fb) || fa*fb>0) return NaN; for(let i=0;i<200;i++){ const m=(a+b)/2; const fm=fn(m); if(Math.abs(fm)<tol) return m; if(fa*fm<0){ b=m; fb=fm; } else { a=m; fa=fm; } } return NaN; }
+
+function RATE(nper,pmt,pv,fv=0,type=0){ nper=Number(nper); pmt=Number(pmt); pv=Number(pv); fv=Number(fv); type=Number(type); if(isNaN(nper) || nper===0) return NaN; const f = (r)=>{ const pow=Math.pow(1+r,nper); return pv*pow + pmt*(1+r*type)*((pow-1)/r) + fv; }; return solveFor(f,0.001,0.1); }
+
+function NPER(rate,pmt,pv,fv=0,type=0){ rate=Number(rate); pmt=Number(pmt); pv=Number(pv); fv=Number(fv); type=Number(type); if(isNaN(rate)) return NaN; if(rate===0) return -(pv+fv)/pmt; const f = (n)=>{ const pow=Math.pow(1+rate,n); return pv*pow + pmt*(1+rate*type)*((pow-1)/rate) + fv; }; // bisection on n
+  let a=1,b=1e6,fa=f(a),fb=f(b); if(!isFinite(fa)||!isFinite(fb)||fa*fb>0) return NaN; for(let i=0;i<200;i++){ const m=(a+b)/2; const fm=f(m); if(Math.abs(fm)<1e-10) return m; if(fa*fm<0){ b=m; fb=fm; } else { a=m; fa=fm; } } return NaN; }
+
+function NPV(rate, cashflows){ rate = Number(rate); if(!Array.isArray(cashflows)) return NaN; let npv=0; for(let t=0;t<cashflows.length;t++){ npv += cashflows[t] / Math.pow(1+rate, t); } return npv; }
+
+function IRR(cashflows){ if(!Array.isArray(cashflows)) return NaN; const f = (r)=>{ let v=0; for(let t=0;t<cashflows.length;t++) v += cashflows[t]/Math.pow(1+r,t); return v; }; return solveFor(f,0.1,0.2); }
+
+// Amortization schedule
+function generateAmortization(rate,nper,pv,pmt,type){ rate=Number(rate); nper=Number(nper); pv=Number(pv); pmt=Number(pmt); type=Number(type)||0; let bal = pv; const rows = []; for(let i=1;i<=nper;i++){ let interest = bal * rate; let principal = pmt - interest; if(type===1 && i===1) { // payment at beginning
+      principal = pmt; interest = 0;
+    }
+    bal = bal - principal;
+    rows.push({period:i,payment:pmt,principal:principal,interest:interest,balance:bal});
+  }
+  return rows;
+}
+
+// UI wiring for financial buttons
+function readInputs(){ let rate = toNumber(document.getElementById('rate_in').value); rate = normalizeRate(rate); return {
+  rate: rate,
+  nper: toNumber(document.getElementById('nper_in').value),
+  pmt: toNumber(document.getElementById('pmt_in').value),
+  pv: toNumber(document.getElementById('pv_in').value),
+  fv: toNumber(document.getElementById('fv_in').value),
+  type: toNumber(document.getElementById('type_in').value) || 0,
+  cf: (document.getElementById('cf_list').value || '').split(',').map(x=>Number(x.trim())).filter(x=>!isNaN(x))
+}; }
+
+function showResult(v){ resultMain.textContent = (typeof v === 'number' ? Number(v).toPrecision(12).replace(/\.0+$/,'') : String(v)); }
+
+document.getElementById('pmt').addEventListener('click', ()=>{ const i = readInputs(); const r = PMT(i.rate,i.nper,i.pv,i.fv,i.type); showResult(r); expr = String(Number(r)); refresh(); });
+document.getElementById('pv').addEventListener('click', ()=>{ const i=readInputs(); const r = PV(i.rate,i.nper,i.pmt,i.fv,i.type); showResult(r); expr=String(Number(r)); refresh(); });
+document.getElementById('fv').addEventListener('click', ()=>{ const i=readInputs(); const r = FV(i.rate,i.nper,i.pmt,i.pv,i.type); showResult(r); expr=String(Number(r)); refresh(); });
+document.getElementById('rate').addEventListener('click', ()=>{ const i=readInputs(); const r = RATE(i.nper,i.pmt,i.pv,i.fv,i.type); showResult(isNaN(r)? 'NaN' : (r*100).toFixed(9)+' %'); expr = isFinite(r) ? String(r) : ''; refresh(); });
+document.getElementById('nper').addEventListener('click', ()=>{ const i=readInputs(); const r = NPER(i.rate,i.pmt,i.pv,i.fv,i.type); showResult(r); expr = isFinite(r)? String(r) : ''; refresh(); });
+
+document.getElementById('npv').addEventListener('click', ()=>{ const i=readInputs(); if(i.cf.length===0){ showResult('No hay flujos'); return; } const r = NPV(i.rate,i.cf); showResult(r); expr=String(Number(r)); refresh(); });
+
+document.getElementById('irr').addEventListener('click', ()=>{ const i=readInputs(); if(i.cf.length===0){ showResult('No hay flujos'); return; } const r = IRR(i.cf); showResult(isNaN(r)? 'No converge' : (r*100).toFixed(9)+' %'); expr = isFinite(r)? String(r) : ''; refresh(); });
+
+// Amortization table generation and export
+let lastAmort = [];
+document.getElementById('amort').addEventListener('click', ()=>{
+  const i = readInputs(); let pmtVal = i.pmt; if(!pmtVal || isNaN(pmtVal)) pmtVal = PMT(i.rate,i.nper,i.pv,i.fv,i.type); const rows = generateAmortization(i.rate,i.nper,i.pv,pmtVal,i.type); lastAmort = rows; renderAmort(rows);
+});
+
+document.getElementById('gen_table').addEventListener('click', ()=>{ const i = readInputs(); let pmtVal = i.pmt; if(!pmtVal || isNaN(pmtVal)) pmtVal = PMT(i.rate,i.nper,i.pv,i.fv,i.type); const rows = generateAmortization(i.rate,i.nper,i.pv,pmtVal,i.type); lastAmort = rows; renderAmort(rows); });
+
+document.getElementById('export_csv').addEventListener('click', ()=>{
+  if(!lastAmort || lastAmort.length===0) return;
+  let csv = 'period,payment,principal,interest,balance\n';
+  lastAmort.forEach(r=>{ csv += `${r.period},${r.payment},${r.principal},${r.interest},${r.balance}\n`; });
+  const blob = new Blob([csv],{type:'text/csv'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = 'amortizacion.csv'; a.click(); URL.revokeObjectURL(url);
+});
+
+function renderAmort(rows){ if(!rows || rows.length===0){ document.getElementById('amort_table_wrap').innerHTML = '<div class="small-muted">—</div>'; return; } let html = '<table class="table"><thead><tr><th>Periodo</th><th>Pago</th><th>Principal</th><th>Interés</th><th>Saldo</th></tr></thead><tbody>'; rows.forEach(r=>{ html += `<tr><td style="text-align:right">${r.period}</td><td>${r.payment.toFixed(2)}</td><td>${r.principal.toFixed(2)}</td><td>${r.interest.toFixed(2)}</td><td>${r.balance.toFixed(2)}</td></tr>`; }); html += '</tbody></table>'; document.getElementById('amort_table_wrap').innerHTML = html; }
+
+// conversion helper (CONV) - simple: APR <-> periodic rate for given periods per year
+document.getElementById('conv').addEventListener('click', ()=>{
+  const rateRaw = toNumber(document.getElementById('rate_in').value); let rate = normalizeRate(rateRaw); if(isNaN(rate)){ showResult('Rate inválida'); return; }
+  // assume user wants APR (annual) <-> periodic assuming nper_in is periods per year
+  const periodsPerYear = toNumber(document.getElementById('nper_in').value) || 12;
+  const apr = Math.pow(1+rate, periodsPerYear)-1; showResult('APR: ' + (apr*100).toFixed(6) + ' %');
+});
+
+// init
+refresh();
+</script>
+</body>
+</html>

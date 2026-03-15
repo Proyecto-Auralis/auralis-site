@@ -18,7 +18,7 @@ Esta sección reúne los materiales introductorios y fundamentales de economía 
       <div class="library-item__actions">
         <a
           class="library-item__button"
-          href="{{ '/knowledge/economia/fundamentos/Auralis Knowledge-¿Qué es la economía definición, objeto y método.pdf' | relative_url }}"
+          href="{{ 'knowledge/economia/fundamentos/Auralis Knowledge - ¿Qué es la economía definición, objeto y método..pdf' | relative_url }}"
           target="_blank"
           rel="noopener"
         >
@@ -27,7 +27,7 @@ Esta sección reúne los materiales introductorios y fundamentales de economía 
 
         <a
           class="library-item__button library-item__button--secondary"
-          href="{{ '/knowledge/economia/fundamentos/Auralis Knowledge-¿Qué es la economía definición, objeto y método.pdf' | relative_url }}"
+          href="{{ 'knowledge/economia/fundamentos/Auralis Knowledge - ¿Qué es la economía definición, objeto y método..pdf' | relative_url }}"
           download="introduccion-economia.pdf"
         >
           Descargar
